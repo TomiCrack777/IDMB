@@ -1,0 +1,124 @@
+/* Fondo general de la página */
+body {
+  background-color: #490c286c; /* Color de fondo con transparencia */
+}
+
+/* Caja de explicación principal */
+#explicacion {
+  width: fit-content; /* Ajusta el ancho al contenido */
+  height: fit-content; /* Ajusta el alto al contenido */
+  background-color: #e0d0d1bb; /* Color de fondo con transparencia */
+  border: 2px solid #e0d0d1; /* Borde del mismo color base pero sin transparencia */
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  margin: 20px auto; /* Espaciado externo, centrado horizontal */
+  padding: 10px 15px; /* Espaciado interno */
+}
+
+/* Barra superior de navegación */
+#titulobarra {
+  display: flex; /* Distribuye elementos en línea */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: #e0d0d1bb; /* Mismo fondo que la caja de explicación */
+  border: 2px solid #e0d0d1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 3200px;
+  width: 95%; /* Se adapta al tamaño de la pantalla */
+  height: 48px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+}
+
+/* Icono dentro de la barra */
+#iconobarra {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px; /* Espacio entre el ícono y el título */
+}
+
+/* Título dentro de la barra */
+#h1 {
+  margin: 0; /* Elimina margen por defecto */
+  text-align: left;
+  font-size: 24px;
+}
+
+/* Contenedor de las cartas (conexión, físico, mental) */
+.cartas-contenedor {
+  display: flex; /* Las pone en línea */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 20px; /* Espacio entre las cartas */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permite que se acomoden si el espacio es pequeño */
+}
+
+/* Estilo general de cada carta */
+.carta {
+  text-align: center; /* Centra el contenido (imagen + texto) */
+}
+
+/* Imagen de las cartas */
+.carta img {
+  width: 180px; /* Tamaño fijo para uniformidad */
+  height: auto; /* Mantiene proporciones */
+  border-radius: 8px; /* Bordes redondeados */
+  border: 2px solid #e0d0d1; /* Borde claro que combina con el tema */
+}
+
+/* Contenedor del menú desplegable (ubicado en la barra) */
+.menu-desplegable {
+  position: relative; /* Para posicionar el contenido del menú sobre él */
+  display: inline-block;
+  margin-left: auto; /* Empuja el menú hacia la derecha */
+  margin-right: 10px;
+}
+
+/* Botón que activa el menú desplegable */
+.boton-menu {
+  background-color: #e0d0d1d5; /* Color a tono con el resto del diseño */
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer; /* Cursor en forma de mano al pasar */
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  transition: box-shadow 0.3s ease; /* Suaviza el efecto al hacer hover */
+}
+
+/* Contenedor de los enlaces del menú desplegable */
+.contenido-menu {
+  display: none; /* Oculto por defecto */
+  position: absolute; /* Posición flotante respecto al botón */
+  right: 0; /* Alineado a la derecha */
+  background-color: #e0d0d1bb;
+  min-width: 160px; /* Ancho mínimo */
+  border: 1px solid #e0d0d1;
+  z-index: 1; /* Se asegura de estar encima de otros elementos */
+  border-radius: 6px;
+}
+
+/* Estilo de los enlaces dentro del menú */
+.contenido-menu a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none; /* Sin subrayado */
+  display: block; /* Cada enlace ocupa toda la línea */
+}
+
+/* Efecto al pasar el mouse por los enlaces del menú */
+.contenido-menu a:hover {
+  background-color: #8f8e8ea7; /* Color más oscuro al pasar */
+}
+
+/* Mostrar el menú cuando se pasa el mouse sobre el contenedor */
+.menu-desplegable:hover .contenido-menu {
+  display: block;
+}
+
+/* Efecto hover del botón del menú (sombra más fuerte) */
+.boton-menu:hover {
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.4);
+}
